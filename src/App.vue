@@ -1,23 +1,34 @@
 <template>
   <div>
-    <FirstClass/>
-    <ConditionalRendering/>
+    <!-- <FirstClass /> -->
+    <!-- <ConditionalRendering /> -->
+    <!-- <ListRendering /> -->
+    <!-- <ConditionalListRendering/> -->
+    <!-- <MethodsInVue/> -->
+    <FormHandling/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import FirstClass from '@/components/FirstClass.vue'
-import ConditionalRendering from '@/components/ConditionalRendering.vue'
+import FirstClass from "@/components/FirstClass.vue";
+import ConditionalRendering from "@/components/ConditionalRendering.vue";
+import ListRendering from "@/components/ListRendering.vue";
+import ConditionalListRendering from "@/components/ConditionalListRendering.vue";
+import MethodsInVue from "@/components/MethodsInVue.vue";
+import FormHandling from "@/components/FormHandling.vue";
 export default {
-  name: 'App',
-  components:{
+  name: "App",
+  components: {
     FirstClass,
-    ConditionalRendering
-  }
-}
+    ConditionalRendering,
+    ListRendering,
+    ConditionalListRendering,
+    MethodsInVue,
+    FormHandling
+  },
+};
 </script>
-
 
 <style>
 #app {
@@ -28,5 +39,7 @@ export default {
   color: #2c3e50;
 }
 
-
+.border-bottom {
+  border-bottom: 1px solid black;
+}
 </style>

@@ -1,5 +1,7 @@
 <template>
-  <div class="FirstClass">
+  <div class="border-bottom">
+    First class vue lecture no. 1-10
+    <br>
     {{ name1 }}
     {{class}}
     <b v-html="channel"></b>
@@ -79,7 +81,4 @@ export default {
   color: red;
 }
 
-.FirstClass{
-  border-bottom: 2px solid black;
-  }
 </style>

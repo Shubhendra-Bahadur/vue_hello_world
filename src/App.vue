@@ -8,10 +8,19 @@
     <!-- <FormHandling/> -->
     <!-- <ComputedProperty/> -->
     <!-- <Watchers/> -->
-    <!-- <ComponentProps :name="name" :age="age"/> -->
-    <!-- <h2>App component name- {{names}}</h2>
-    <ProvideInject/> -->
-    <Popup/>
+    <ComponentProps :name="name" :age="age"/>
+    <h2>App component nam- {{names}}</h2>
+    <!-- <ProvideInject/> -->
+    <!-- <button @click="showPopup=true">Show popup</button> -->
+    <!-- <Popup v-show="showPopup" @close="closePopup"/> -->
+    <!-- <Input/> -->
+    <!-- <Slots content="card content1"/> -->
+    <!-- <Slots content="card content2"/> -->
+    <!-- <Slots>Card content slot</Slots> -->
+    <!-- <Slots><h1>Card content slot</h1></Slots> -->
+    <!-- <HTTP_GET/> -->
+    <!-- <HTTP_POST/> -->
+    
   </div>
 </template>
 
@@ -28,6 +37,10 @@ import Watchers from "@/components/Watchers.vue";
 import ComponentProps from "@/components/ComponentProps.vue";
 import ProvideInject from "@/components/ProvideInject.vue";
 import Popup from "@/components/Popup.vue";
+import Input from "@/components/Input.vue";
+import Slots from "@/components/Slots.vue";
+import HTTP_GET from "@/components/HTTP_GET.vue";
+import HTTP_POST from "@/components/HTTP_POST.vue";
 export default {
   name: "App",
   components: {
@@ -41,13 +54,18 @@ export default {
     Watchers,
     ComponentProps,
     ProvideInject,
-    Popup
+    Popup,
+    Input,
+    Slots,
+    HTTP_GET,
+    HTTP_POST
   },
   data() {
     return {
-      // name:'viswas',
+      name:'viswas',
       // age:24,
       // names:"shubhendra Bahadur"
+      showPopup:false
     }
   },
   provide() {
@@ -55,7 +73,14 @@ export default {
       // UserName:this.names
 
     }
-  }
+  },
+
+  methods: {
+    closePopup(name){
+      this.showPopup=false;
+      console.log('name',name)
+    }
+  },
 };
 </script>
 

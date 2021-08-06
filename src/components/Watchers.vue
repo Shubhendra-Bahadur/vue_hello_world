@@ -21,8 +21,8 @@ export default {
   methods: {},
   computed: {},
   watch:{
-      volume(newValue) {
-          if(newValue===16){
+      volume(newValue,oldValue) {
+          if(newValue===16 && newValue>oldValue){
               alert('volume too high');
           }
       }

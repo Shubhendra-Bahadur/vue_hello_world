@@ -11,7 +11,7 @@
         </template>
 
         <template v-for="item in getExpensiveItem" :key="item.id">
-            <h2 v-if="item.price>100">computed Items-{{item.title}} {{item.price}}</h2>
+            <h2 >computed Items-{{item.title}} {{item.price}}</h2>
         </template>
 
 
@@ -48,9 +48,9 @@ export default {
         }
     },
     computed:{
-        fullName(){
-            return `${this.first} ${this.last}`
-        },
+        // fullName(){
+        //     return `${this.first} ${this.last}`
+        // },
 
         getExpensiveItem(){
             return this.items.filter(item=>item.price>100);
